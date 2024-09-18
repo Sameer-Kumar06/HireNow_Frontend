@@ -39,39 +39,16 @@ import coinbaseLogo from "../assets/coinbase.png";
 
 // };
 
-export function JobList() {
-  const [jobs, setJobs] = useState([
+export function InternshipList() {
+  const [internship, setInternship] = useState([
     {
       id: 1,
-      title: "Marketing Manager",
-      company: "Instagram",
-      location: "New Mexico, USA",
-      salary: "$60k-100k/year",
-      jobDescription:
-        "As a Marketing Manager at Instagram, you will be responsible for developing, implementing, and executing strategic marketing plans for the entire organization. You will lead campaigns that help enhance our brand presence and increase user engagement. In this role, you will work closely with cross-functional teams such as product, sales, and design to deliver creative and engaging content. You will analyze market trends, oversee advertising strategies, and manage relationships with influencers. You will be responsible for increasing our customer base through innovative ideas. Experience in social media marketing is crucial for this role.",
-      timeRemaining: "4 Days Remaining",
-      details: {
-        website: "https://instagram.com",
-        phone: "123-456-7890",
-        email: "contact@instagram.com",
-      },
-      company_info: {
-        founded: "2010",
-        organization_type: "Social Media",
-        company_size: "10,000+",
-      },
-      logoUrl: instagramLogo,
-      featured: true,
-      jobType: "Remote",
-    },
-    {
-      id: 2,
-      title: "Software Engineer",
+      title: "Software Engineering Intern",
       company: "Google",
       location: "Mountain View, CA, USA",
       salary: "$120k-150k/year",
       jobDescription:
-        "As a Software Engineer at Google, you will design, develop, and maintain complex software systems that are scalable, reliable, and efficient. You will collaborate with product managers, designers, and other engineers to develop cutting-edge products that enhance user experience across Google services. You’ll be involved in all stages of the software development lifecycle, including architecture, implementation, and testing. This role requires a deep understanding of data structures, algorithms, and system design. Familiarity with coding languages such as Python, Java, and C++ is essential. Experience in building large-scale distributed systems is preferred.",
+        "As a Software Engineering at Google, you will design, develop, and maintain complex software systems that are scalable, reliable, and efficient. You will collaborate with product managers, designers, and other engineers to develop cutting-edge products that enhance user experience across Google services. You’ll be involved in all stages of the software development lifecycle, including architecture, implementation, and testing. This role requires a deep understanding of data structures, algorithms, and system design. Familiarity with coding languages such as Python, Java, and C++ is essential. Experience in building large-scale distributed systems is preferred.",
       timeRemaining: "6 Days Remaining",
       details: {
         website: "https://google.com",
@@ -88,13 +65,59 @@ export function JobList() {
       jobType: "Full Time",
     },
     {
+      id: 2,
+      title: "Data Sciene Intern",
+      company: "Facebook",
+      location: "Menlo Park, CA, USA",
+      salary: "$110k-140k/year",
+      jobDescription:
+        "At Facebook, Data Sciene Intern leverage data to inform strategic decisions, improve the user experience, and drive business outcomes. In this role, you will apply statistical models, machine learning algorithms, and predictive analytics to analyze complex data sets. You will be responsible for identifying trends, providing insights, and supporting product development by creating data-driven recommendations. This position requires strong analytical skills, proficiency in programming languages such as Python or R, and experience with data visualization tools. Previous experience in handling large-scale data sets and collaborating with cross-functional teams is a plus",
+      timeRemaining: "5 Days Remaining",
+      details: {
+        website: "https://facebook.com",
+        phone: "555-123-4567",
+        email: "careers@facebook.com",
+      },
+      company_info: {
+        founded: "2004",
+        organization_type: "Social Media",
+        company_size: "60,000+",
+      },
+      logoUrl: facebookLogo,
+      featured: true,
+      jobType: "Remote",
+    },
+    {
       id: 3,
-      title: "Product Manager",
+      title: "Cloud Architect Intern",
+      company: "Amazon",
+      location: "Seattle, WA, USA",
+      salary: "$130k-160k/year",
+      jobDescription:
+        "As a Cloud Architect Intern at Amazon, you will design cloud infrastructure that is secure, scalable, and optimized for performance. You will work closely with clients to understand their requirements and develop solutions that leverage Amazon Web Services (AWS) to its fullest potential. This role will require you to build and maintain cloud environments, troubleshoot issues, and ensure that the system is always available and efficient. You will also collaborate with engineering teams to ensure seamless integration between on-premise systems and the cloud. Expertise in AWS, Azure, or Google Cloud Platform is essential for this role.",
+      timeRemaining: "2 Days Remaining",
+      details: {
+        website: "https://amazon.com",
+        phone: "444-555-6666",
+        email: "jobs@amazon.com",
+      },
+      company_info: {
+        founded: "1994",
+        organization_type: "E-commerce",
+        company_size: "1,000,000+",
+      },
+      logoUrl: amazonLogo,
+      featured: false,
+      jobType: "Full Time",
+    },
+    {
+      id: 4,
+      title: "Product Manager Intern",
       company: "Atlassian",
       location: "Sydney, Australia",
       salary: "$90k-120k/year",
       jobDescription:
-        "As a Product Manager at Atlassian, you will lead the product development process from ideation to launch. You will work closely with engineers, designers, and other stakeholders to build products that solve customer problems and align with the company’s vision. Your responsibilities will include defining product roadmaps, prioritizing features, and ensuring timely delivery of releases. You will also engage with customers to gather feedback and make data-driven decisions to improve the product. Strong communication skills and experience in managing technical products are key to success in this role.",
+        "As a Product Manager Intern at Atlassian, you will lead the product development process from ideation to launch. You will work closely with engineers, designers, and other stakeholders to build products that solve customer problems and align with the company’s vision. Your responsibilities will include defining product roadmaps, prioritizing features, and ensuring timely delivery of releases. You will also engage with customers to gather feedback and make data-driven decisions to improve the product. Strong communication skills and experience in managing technical products are key to success in this role.",
       timeRemaining: "7 Days Remaining",
       details: {
         website: "https://atlassian.com",
@@ -111,77 +134,77 @@ export function JobList() {
       jobType: "Remote",
     },
     {
-      id: 4,
-      title: "DevOps Engineer",
-      company: "TCS",
-      location: "Bangalore, India",
-      salary: "$70k-100k/year",
-      jobDescription:
-        "As a DevOps Engineer at TCS, you will be responsible for automating and streamlining operations, as well as improving system reliability and performance. You will work with development and IT teams to deploy new applications, manage infrastructure, and troubleshoot operational issues. Your role will involve continuous integration, continuous delivery (CI/CD), and monitoring of systems to ensure smooth operations. Knowledge of cloud technologies, scripting languages, and containerization (Docker, Kubernetes) is crucial for this role. You will also ensure security protocols are followed and contribute to process improvement initiatives.",
-      timeRemaining: "1 Day Remaining",
-      details: {
-        website: "https://tcs.com",
-        phone: "777-888-9999",
-        email: "jobs@tcs.com",
-      },
-      company_info: {
-        founded: "1968",
-        organization_type: "IT Services",
-        company_size: "500,000+",
-      },
-      logoUrl: tcsLogo,
-      featured: false,
-      jobType: "Full Time",
-    },
-    {
       id: 5,
-      title: "UX/UI Designer",
-      company: "IBM",
-      location: "Austin, TX, USA",
-      salary: "$100k-130k/year",
+      title: "System Administrator Intern",
+      company: "Wipro",
+      location: "Hyderabad, India",
+      salary: "$60k-90k/year",
       jobDescription:
-        "As a UX/UI Designer at IBM, you will play a key role in shaping the user experience across various products and services. You will collaborate with product managers, engineers, and researchers to design intuitive and visually appealing interfaces. Your responsibilities include creating wireframes, prototypes, and user flows to optimize the overall user experience. You will conduct user research to understand pain points and iterate on design solutions based on feedback. Proficiency in design tools such as Sketch, Figma, or Adobe XD is required, along with a strong understanding of usability principles.",
-      timeRemaining: "5 Days Remaining",
+        "As a System Administrator at Wipro, you will manage the day-to-day operations of an organization’s IT infrastructure. This includes monitoring system performance, ensuring uptime, managing servers, and resolving technical issues as they arise. You will be responsible for the installation, configuration, and maintenance of hardware and software systems. Additionally, you will oversee network and security systems to ensure that they are operating efficiently and securely. Strong troubleshooting skills, experience with various operating systems, and knowledge of networking protocols are essential for this position.",
+      timeRemaining: "3 Days Remaining",
       details: {
-        website: "https://ibm.com",
-        phone: "555-666-7777",
-        email: "careers@ibm.com",
+        website: "https://wipro.com",
+        phone: "123-456-7890",
+        email: "contact@wipro.com",
       },
       company_info: {
-        founded: "1911",
-        organization_type: "Tech",
-        company_size: "350,000+",
+        founded: "1945",
+        organization_type: "IT Services",
+        company_size: "200,000+",
       },
-      logoUrl: ibmLogo,
-      featured: false,
+      logoUrl: wiproLogo,
+      featured: true,
       jobType: "Remote",
     },
     {
       id: 6,
-      title: "Cybersecurity Analyst",
-      company: "Cisco",
-      location: "San Francisco, CA, USA",
-      salary: "$110k-140k/year",
+      title: "AI Research Intern",
+      company: "DeepMind",
+      location: "London, UK",
+      salary: "$150k-200k/year",
       jobDescription:
-        "As a Cybersecurity Analyst at Cisco, you will be responsible for safeguarding the organization's network and data from cyber threats. You will monitor systems for potential vulnerabilities, perform risk assessments, and respond to security incidents. In this role, you will implement security measures, such as firewalls and encryption protocols, to protect sensitive information. You will also collaborate with IT teams to ensure that best practices in cybersecurity are followed. Experience with intrusion detection systems, penetration testing, and threat intelligence tools is crucial. Keeping up with the latest cybersecurity trends is a must.",
-      timeRemaining: "6 Days Remaining",
+        "As an AI Research Intern at DeepMind, you will conduct cutting-edge research in artificial intelligence and machine learning. You will work on innovative projects that aim to push the boundaries of what AI can achieve, contributing to real-world applications in healthcare, robotics, and more. Your work will involve developing novel algorithms, collaborating with top-tier researchers, and publishing your findings in leading scientific journals. A deep understanding of neural networks, reinforcement learning, and probabilistic models is essential. Experience with Python, TensorFlow, or PyTorch is preferred for this role.",
+      timeRemaining: "8 Days Remaining",
       details: {
-        website: "https://cisco.com",
-        phone: "888-999-0000",
-        email: "jobs@cisco.com",
+        website: "https://deepmind.com",
+        phone: "000-123-4567",
+        email: "careers@deepmind.com",
       },
       company_info: {
-        founded: "1984",
-        organization_type: "Networking",
-        company_size: "75,000+",
+        founded: "2010",
+        organization_type: "AI Research",
+        company_size: "1,000+",
       },
-      logoUrl: ciscoLogo,
+      logoUrl: deepmindLogo,
+      featured: true,
+      jobType: "Remote",
+    },
+    {
+      id: 7,
+      title: "Machine Learning Intern",
+      company: "Netflix",
+      location: "Los Angeles, CA, USA",
+      salary: "$130k-160k/year",
+      jobDescription:
+        "As a Machine Learning Intern at Netflix, you will work on developing and deploying machine learning models to enhance various aspects of Netflix's services, from content recommendations to user experience. You will collaborate with data scientists, software engineers, and product teams to identify key areas where machine learning can improve performance and user satisfaction. Your responsibilities include building scalable machine learning pipelines, optimizing algorithms for real-time applications, and monitoring model performance in production. A strong background in deep learning frameworks, such as TensorFlow or PyTorch, and experience in working with large datasets is required.",
+      timeRemaining: "2 Days Remaining",
+      details: {
+        website: "https://netflix.com",
+        phone: "321-654-9870",
+        email: "jobs@netflix.com",
+      },
+      company_info: {
+        founded: "1997",
+        organization_type: "Streaming",
+        company_size: "12,000+",
+      },
+      logoUrl: netflixLogo,
       featured: true,
       jobType: "Full Time",
     },
     {
-      id: 7,
-      title: "Blockchain Developer",
+      id: 8,
+      title: "Blockchain Developer Intern",
       company: "Coinbase",
       location: "New York, NY, USA",
       salary: "$120k-150k/year",
@@ -203,13 +226,13 @@ export function JobList() {
       jobType: "Remote",
     },
     {
-      id: 8,
-      title: "Software Engineer",
+      id: 9,
+      title: "Financial Analyst Intern",
       company: "Morgan Stanley",
       location: "London, UK",
       salary: "$90k-120k/year",
       jobDescription:
-        "As a Software Engineer at Morgan Stanley, you will develop and maintain critical financial applications used across the organization. You will work on high-performance, low-latency systems that support trading, risk management, and analytics. This role requires expertise in programming languages such as Java, Python, or C++, as well as experience in large-scale distributed systems. You will collaborate with business analysts and other developers to ensure software solutions meet business needs. The ability to work in a fast-paced, deadline-driven environment and experience in the financial industry will be beneficial for this role.",
+        "As a Financial Analyst at JP Morgan, you will provide financial analysis and insights to support investment decisions. You will assess market trends, analyze financial statements, and prepare reports for senior management. In this role, you will work with investment bankers, traders, and portfolio managers to help optimize the firm’s financial strategies. Your duties include preparing forecasts, managing risk, and creating financial models. A strong understanding of financial markets, proficiency in Excel and financial modeling software, and an ability to interpret economic trends are essential for this role.",
       timeRemaining: "4 Days Remaining",
       details: {
         website: "https://morganstanley.com",
@@ -232,12 +255,12 @@ export function JobList() {
   const handleApplyNow = (job) => {
     console.log(job);
 
-    navigate(`/job-detail`, { state: { job } });
+    navigate(`/internship-detail`, { state: { job } });
   };
 
   return (
     <div className="max-w-6xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Find Job</h1>
+      <h1 className="text-2xl font-bold mb-4">Find Internships</h1>
       <div className="flex items-center space-x-4 mb-6">
         <div className="flex-1 relative">
           <input
@@ -280,7 +303,7 @@ export function JobList() {
           Advance Filter
         </button>
         <button className="px-4 py-2 bg-blue-600 text-white rounded-md">
-          Find Job
+          Find Internship
         </button>
       </div>
 
@@ -350,7 +373,7 @@ export function JobList() {
       </div>
 
       <div className="space-y-4">
-        {jobs.map((job) => (
+        {internship.map((job) => (
           <div
             key={job.id}
             className="flex items-center justify-between bg-white p-4 rounded-lg shadow"
